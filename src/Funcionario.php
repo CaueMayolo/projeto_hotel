@@ -72,7 +72,7 @@ class Funcionario implements ActiveRecord{
 
     public function authenticate():bool{
         $conexao = new MySQL();
-        $sql = "SELECT id_funcionario,senha FROM Funcionario WHERE email = '{$this->email}'";
+        $sql = "SELECT id_funcionario, senha FROM funcionario WHERE email = '{$this->email}'";
         $resultados = $conexao->consulta($sql);
         if(password_verify($this->senha,$resultados[0]['senha'])){
             session_start();

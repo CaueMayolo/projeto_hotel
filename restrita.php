@@ -5,7 +5,7 @@ if(!isset($_SESSION['id_funcionario'])){
 }
 require_once __DIR__."/vendor/autoload.php";
 
-$contatos = Pessoa::findallByFuncionario($_SESSION['id_funcionario']);
+//$contatos = Pessoa::findallByFuncionario($_SESSION['id_funcionario']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,26 +16,15 @@ $contatos = Pessoa::findallByFuncionario($_SESSION['id_funcionario']);
     <title>Página de Contatos</title>
 </head>
 <body>
-
+<!-- 
 <table>
     <tr>
         <td>Nome</td>
         <td>E-mail</td>
         <td>Opções</td>
     </tr>
-    <?php
-    foreach($contatos as $contato){
-        echo "<tr>";
-        echo "<td>{$contato->getNome()}</td>";
-        echo "<td>{$contato->getEmail()}</td>";
-        echo "<td>
-                <a href='formEditPessoa.php?id={$contato->getId()}'>Editar</a>
-                <a href='excluirPessoa.php?id={$contato->getId()}'>Excluir</a> 
-             </td>";
-        echo "</tr>";
-    }
-    ?>
-</table>
+
+</table> -->
 <a href='formUsuario.php'>Adicionar Contato</a> | 
 <a href='sair.php'>Sair</a>
 </body>
