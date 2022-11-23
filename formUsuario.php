@@ -15,7 +15,7 @@ if(isset($_POST['botao'])){
     <title>Adiciona Funcionario</title>
 </head>
 <body>
-    <form action='formCadUsuario.php' method='post'>
+    <form action='formUsuario.php' method='post'>
         <label for='email'>E-mail:</label>
         <input type='email' name='email' id='email' required>
         <label for='senha'>Senha:</label>

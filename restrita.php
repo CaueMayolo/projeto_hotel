@@ -36,7 +36,7 @@ $contatos = Pessoa::findallByFuncionario($_SESSION['id_funcionario']);
     }
     ?>
 </table>
-<a href='formCadPessoa.php'>Adicionar Contato</a> | 
+<a href='formUsuario.php'>Adicionar Contato</a> | 
 <a href='sair.php'>Sair</a>
 </body>
 </html>

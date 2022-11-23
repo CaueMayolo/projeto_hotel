@@ -25,6 +25,6 @@ if(isset($_POST['botao'])){
         <input type='password' name='senha' id='senha' required>
         <input type='submit' name='botao' value='Acessar'>
     </form>
-    <a href='formCadUsuario.php'>Cadastrar usuario</a>
+    <a href='formUsuario.php'>Cadastrar usuario</a>
 </body>
 </html>
