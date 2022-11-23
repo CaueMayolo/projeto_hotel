@@ -1,0 +1,14 @@
+{
+    "name": "caue_mayolo/projeto_hotel",
+    "authors": [
+        {
+            "name": "cld"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "":"src/"
+        }
+    }
+}
