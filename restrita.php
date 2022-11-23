@@ -16,16 +16,6 @@ require_once __DIR__."/vendor/autoload.php";
     <title>Página de Contatos</title>
 </head>
 <body>
-<!-- 
-<table>
-    <tr>
-        <td>Nome</td>
-        <td>E-mail</td>
-        <td>Opções</td>
-    </tr>
-
-</table> -->
-<a href='formUsuario.php'>Adicionar Contato</a> | 
 <a href='sair.php'>Sair</a>
 </body>
 </html>
