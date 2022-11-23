@@ -3,9 +3,8 @@ session_start();
 if(!isset($_SESSION['id_funcionario'])){
     header("location:index.php");
 }
-require_once __DIR__."/vendor/autoload.php";
+require_once __DIR__."/vendor/autoload.php"
 
-//$contatos = Pessoa::findallByFuncionario($_SESSION['id_funcionario']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
