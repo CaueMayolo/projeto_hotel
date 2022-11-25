@@ -1,6 +1,6 @@
 <?php
 
-class quarto implements ActiveRecord{
+class Quarto implements ActiveRecord{
 
     private int $id_quarto;
     

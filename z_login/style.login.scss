@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Tiro+Bangla&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     background-color: rgb(95, 95, 95);
     font-family: sans-serif; 
