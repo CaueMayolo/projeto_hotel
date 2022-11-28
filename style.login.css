@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Tiro+Bangla&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -17,6 +20,14 @@ body{
     padding-top: 40px;
 }
 
+h1{
+    font-size: 100px;
+    color: black;
+    font-family: 'Heebo', sans-serif;
+    text-align: center;
+    margin: 50px;
+}
+
 .card{
     box-shadow: 1px 1px 5px #0e0e0df0;
     background-color: white;
@@ -31,13 +42,13 @@ body{
 .titulo{
     color: rgb(0, 0, 0);
     font-size: xx-large;
-    font-family: 'Tiro Bangla', serif;
+    font-family: 'Heebo', sans-serif;
 }
 
 .desc{
     color: rgb(0, 0, 0);
     font-size:medium;
-    font-family: 'Tiro Bangla', serif;
+    font-family: 'Heebo', sans-serif;
 }
 
 .card-group > label{
@@ -73,6 +84,13 @@ body{
 
 .div-botao-login{
     text-align: center;
+}
+
+.botao-login{
+    width: 70px;
+    height: 30px;
+    color: black;
+    background-color: #5085cb;
 }
 
 .link-cadastro{

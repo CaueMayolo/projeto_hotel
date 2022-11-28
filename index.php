@@ -17,9 +17,12 @@ if(isset($_POST['botao'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.login.css">
-    <title>Login de usuário</title>
+    <title>User Login</title>
 </head>
 <body>
+    <div>
+        <h1>Pococupado's manager</h1>
+    </div>
     <form class="form" action='index.php' method='post'>
         <div class='card'>
             <div class='card-top'>
@@ -36,7 +39,7 @@ if(isset($_POST['botao'])){
                 <label for='senha'>Password:</label>
                 <input type='password' name='senha' id='senha' required>
             </div> 
-            <div class='div-botao-login'>      
+            <div class='div-botao-login'>  
                 <input class='botao-login' type='submit' name='botao' value='Login'>
             </div>
             <a class="link-cadastro" href='formFuncionario.php'>Register user</a>

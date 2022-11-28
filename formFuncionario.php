@@ -14,17 +14,20 @@ if(isset($_POST['botao'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.login.css">
-    <title>Register 
-employee</title>
+    <title>Register employee</title>
 </head>
 <body>
-<form class="form" action='formFuncionario.php' method='post'>
+    <div>
+        <h1>Pococupado's manager</h1>
+    </div>
+    <form class="form" action='formFuncionario.php' method='post'>
         <div class="card">
             <div class="card-top">
                 <h2 class="titulo">Sign up</h2>
-                <p class="desc">Register 
-employee</p>
+                <br>
+                <p class="desc">Register employee</p>
             </div>
+            <br>
             <div class="card-group">
                 <label for='email'>E-mail:</label>
                 <input type='email' name='email' id='email' required>
@@ -38,5 +41,6 @@ employee</p>
             </div>
             <a class="link-cadastro" href='index.php'>Return to login </a>
         </div>
+    </form>
 </body>
 </html>
