@@ -24,8 +24,10 @@ if(isset($_POST['botao'])){
         <div class='card'>
             <div class='card-top'>
                 <h2 class='titulo'>Sign in</h2>
+                <br>
                 <p class='desc'>Enter the manager</p>
             </div>
+            <br>
             <div class="card-group">
                 <label for='email'>E-mail:</label>
                 <input type='email' name='email' id='email' required>

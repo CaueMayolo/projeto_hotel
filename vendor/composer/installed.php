@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'caue_mayolo/projeto_hotel',
-        'pretty_version' => 'dev-main',
-        'version' => 'dev-main',
-        'reference' => '6ffe4fdd8fa701a262cabf779d968330bed8740a',
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
+        'reference' => NULL,
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'caue_mayolo/projeto_hotel' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
-            'reference' => '6ffe4fdd8fa701a262cabf779d968330bed8740a',
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
+            'reference' => NULL,
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

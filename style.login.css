@@ -7,7 +7,7 @@
 }
 
 body{
-    background-color: rgb(95, 95, 95);
+    background-color: #5085cb;
     font-family: sans-serif; 
 }
 
@@ -76,8 +76,6 @@ body{
 }
 
 .link-cadastro{
-    text-align: center;
-    align-items: center;
     color: black;
     font-size: small;
 }
