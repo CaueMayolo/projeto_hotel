@@ -21,11 +21,11 @@ body{
 }
 
 h1{
-    font-size: 100px;
+    font-size: 80px;
     color: black;
     font-family: 'Heebo', sans-serif;
     text-align: center;
-    margin: 50px;
+    margin: 5px;
 }
 
 .card{

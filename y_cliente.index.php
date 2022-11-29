@@ -12,6 +12,7 @@
 <body>
     <div class="container">
         <h1>Client manager</h1>
+        <a href='y_cliente.cad.php'>Register client</a>
     </div>
 </body>
 </html>

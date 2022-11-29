@@ -1,4 +1,4 @@
-<?php require_once __DIR__.'x_navbar.php'; ?>
+<?php require_once __DIR__.'/x_navbar.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,6 +12,9 @@
 <body>
     <div class="container">
         <h1>Room manager</h1>
+        <div>
+        <a href='z_quarto.cad.php'>Register room</a>
+        </div>
     </div>
 </body>
 </html>

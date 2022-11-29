@@ -18,7 +18,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="z_quarto.index.php">Room manager</a>
+                <a class="nav-link active" aria-current="page" href="z_quarto.index.php">Room manager</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="y_cliente.index.php">Client manager</a>
