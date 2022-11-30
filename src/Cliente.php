@@ -18,11 +18,11 @@ class Cliente implements ActiveRecord{
         return $this->id_cliente;
     }
 
-    public function setTitulo(string $nome):void{
+    public function setNome(string $nome):void{
         $this->nome = $nome;
     }
 
-    public function getTitulo():string{
+    public function getNome():string{
         return $this->nome;
     }
 
@@ -45,9 +45,9 @@ class Cliente implements ActiveRecord{
     public function save():bool{
         $conexao = new MySQL();
         if(isset($this->id_cliente)){
-            $sql = "UPDATE cliente SET nome = '{$this->nome}' ,sobrenome = '{$this->sobrenome}',cpf = {$this->cpf} WHERE id_cliente = {$this->id_cliente}";
+            $sql = "UPDATE cliente SET nome = '{$this->nome}' ,sobrenome = '{$this->sobrenome}',cpf = '{$this->cpf}' WHERE id_cliente = {$this->id_cliente}";
         }else{
-            $sql = "INSERT INTO cliente (nome,sobrenome,cpf) VALUES ('{$this->nome}','{$this->sobrenome}',{$this->cpf})";
+            $sql = "INSERT INTO cliente (nome,sobrenome,cpf) VALUES ('{$this->nome}','{$this->sobrenome}','{$this->cpf}')";
         }
         return $conexao->executa($sql);
         

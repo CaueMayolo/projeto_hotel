@@ -7,7 +7,7 @@ class Quarto implements ActiveRecord{
     public function __construct(
         private int $numero,
         private string $tipo,
-        private string $status){
+        private string $estado){
     }
 
     public function setIdQuarto(int $id_quarto):void{
@@ -34,20 +34,20 @@ class Quarto implements ActiveRecord{
         return $this->tipo;
     }
 
-    public function setStatus(int $status):void{
-        $this->status = $status;
+    public function setEstado(string $estado):void{
+        $this->estado = $estado;
     }
 
-    public function getStatus():int{
-        return $this->status;
+    public function getEstado():string{
+        return $this->estado;
     }
 
     public function save():bool{
         $conexao = new MySQL();
         if(isset($this->id_quarto)){
-            $sql = "UPDATE quarto SET numero = '{$this->numero}' ,tipo = '{$this->tipo}',status = {$this->status} WHERE id_quarto = {$this->id_quarto}";
+            $sql = "UPDATE quarto SET numero = '{$this->numero}' ,tipo = '{$this->tipo}',estado = '{$this->estado}' WHERE id_quarto = {$this->id_quarto}";
         }else{
-            $sql = "INSERT INTO quarto (numero,tipo,status) VALUES ('{$this->numero}','{$this->tipo}',{$this->status})";
+            $sql = "INSERT INTO quarto (numero,tipo,estado) VALUES ('{$this->numero}','{$this->tipo}','{$this->estado}')";
         }
         return $conexao->executa($sql);
         
@@ -62,8 +62,8 @@ class Quarto implements ActiveRecord{
         $conexao = new MySQL();
         $sql = "SELECT * FROM quarto WHERE id_quarto = {$id_quarto}";
         $resultado = $conexao->consulta($sql);
-        $p = new Quarto($resultado[0]['numero'],$resultado[0]['tipo'],$resultado[0]['status']);
-        $p->setId($resultado[0]['id_quarto']);
+        $p = new Quarto($resultado[0]['numero'],$resultado[0]['tipo'],$resultado[0]['estado']);
+        $p->setIdQuarto($resultado[0]['id_quarto']);
         return $p;
     }
     public static function findall():array{
@@ -72,7 +72,7 @@ class Quarto implements ActiveRecord{
         $resultados = $conexao->consulta($sql);
         $quartos = array();
         foreach($resultados as $resultado){
-            $p = new Quarto($resultado['numero'],$resultado['tipo'],$resultado['status']);
+            $p = new Quarto($resultado['numero'],$resultado['tipo'],$resultado['estado']);
             $p->setIdQuarto($resultado['id_quarto']);
             $quartos[] = $p;
         }

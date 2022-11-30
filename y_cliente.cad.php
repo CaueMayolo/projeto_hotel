@@ -3,7 +3,7 @@ if(isset($_POST['botao'])){
     require_once __DIR__."/vendor/autoload.php";
     $cliente = new Cliente($_POST['nome'],$_POST['sobrenome'],$_POST['cpf']);
     $cliente->save();
-    header("location: restrita.php");
+    header("location: y_cliente.index.php");
 }
 ?>
 <!DOCTYPE html>

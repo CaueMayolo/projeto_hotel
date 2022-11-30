@@ -17,6 +17,7 @@ if(isset($_POST['botao'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.login.css">
+    <script src="https://kit.fontawesome.com/ff4091c7e3.js" crossorigin="anonymous"></script>
     <title>User Login</title>
 </head>
 <body>
@@ -40,7 +41,7 @@ if(isset($_POST['botao'])){
                 <input type='password' name='senha' id='senha' required>
             </div> 
             <div class='div-botao-login'>  
-                <input class='botao-login' type='submit' name='botao' value='Login'>
+                <button class='botao-login' type='submit' name='botao'>Login  <i class="fa-solid fa-right-to-bracket"></i></button>
             </div>
             <a class="link-cadastro" href='formFuncionario.php'>Register user</a>
         </div>

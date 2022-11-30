@@ -1,5 +1,10 @@
 <?php require_once __DIR__.'/x_navbar.php'; ?>
 
+<?php
+require_once __DIR__."/vendor/autoload.php";
+$clientes = Cliente::findall();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +17,33 @@
 <body>
     <div class="container">
         <h1>Client manager</h1>
-        <a href='y_cliente.cad.php'>Register client</a>
+        <div><br>
+            <a href='y_cliente.cad.php'><button class="btn btn-primary"><i class="fa-regular fa-circle-dot">  Register client</i></button></a>
+        </div><br>
+        <table class="table">
+            <tr class=titulos>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>CPF</th>
+                <th>Opções</th>
+            </tr>
+            <?php
+            foreach($clientes as $cliente){
+                echo "<tr>";
+                echo "<td>{$cliente->getNome()}</td>";
+                echo "<td>{$cliente->getSobrenome()}</td>";
+                echo "<td>{$cliente->getCpf()}</td>";
+                echo "<td>
+                        <div>
+                            <a href='y_cliente.editar.php?id={$cliente->getIdCliente()}'><button class='btn btn-primary'>Edit  <i class='fa-solid fa-pen-to-square'></i></button></a>
+                            <a href='y_cliente.excluir.php?id={$cliente ->getIdCliente()}'><button class='btn btn-primary'>Delete  <i class='fa-solid fa-trash'></i></button></a
+                        </div>
+                    </td>";
+                echo "</tr>";
+            }
+            ?>
+        </table>
+    </div>
     </div>
 </body>
 </html>

@@ -1,17 +1,28 @@
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: black;
 }
 
+.navbar{
+    background-color: #0d6efd;
+}
 
 .nav-item{
     margin: 10px;
     padding: 5px;
-    border: 5px solid black;
-    border-radius: 10px;
+    position: relative;
+    left: 20%;
 }
 
-.quit{
-    text-align: right;
+.nav-link{
+
+    color: beige;
 }
+
+.navbar-nav{    
+
+}
+
