@@ -20,7 +20,7 @@ if(isset($_POST['botao'])){
         <br><br>
         Last name: <br><input name='sobrenome' type='text' required>
         <br><br>
-        Cpf: <br><input name='cpf' type='int' required>
+        Cpf: <br><input name='cpf' id="cpf" type='int' required>
         <br><br>
         <button name='botao'>Send</button>
     </form>
