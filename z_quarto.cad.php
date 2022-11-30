@@ -12,7 +12,7 @@ if(isset($_POST['botao'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adiciona Livro</title>
+    <title>Adds Room</title>
 </head>
 <body>
     <form action='z_quarto.cad.php' method='POST'>
@@ -22,7 +22,7 @@ if(isset($_POST['botao'])){
         <br><br>
         Status: <br><input name='estado' type='int' required>
         <br><br>
-        <input type='submit' name='botao'>
+        <button name='botao'>Send</button>
     </form>
 </body>
 </html>

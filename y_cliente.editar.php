@@ -17,21 +17,21 @@ if(isset($_POST['botao'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edita Quarto</title>
+    <title>Edit Client</title>
 </head>
 <body>
     <form action='y_cliente.editar.php' method='POST'>
         <?php
-            echo "Nome: <input name='nome' value='{$cliente->getNome()}' type='text' required>";
+            echo "Name: <input name='nome' value='{$cliente->getNome()}' type='text' required>";
             echo "<br>";
-            echo "Sobrenome: <input name='sobrenome' value='{$cliente->getSobrenome()}' type='text' required>";
+            echo "Last name: <input name='sobrenome' value='{$cliente->getSobrenome()}' type='text' required>";
             echo "<br>";
             echo "CPF: <input name='cpf' value='{$cliente->getCpf()}' type='text' required>";
             echo "<br>";
             echo "<input name='id' value='{$cliente->getIdCliente()}' type='hidden'>";
         ?>
         <br>
-        <input type='submit' name='botao'>
+        <button name='botao'>send</button>
     </form>
 </body>
 </html>

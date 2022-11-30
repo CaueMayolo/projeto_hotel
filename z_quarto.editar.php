@@ -17,7 +17,7 @@ if(isset($_POST['botao'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edita Quarto</title>
+    <title>Edit Room</title>
 </head>
 <body>
     <form action='z_quarto.editar.php' method='POST'>

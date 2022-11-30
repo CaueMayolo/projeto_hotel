@@ -16,17 +16,17 @@ $quartos = Quarto::findall();
     <title>Room manager</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container"><br>
         <h1>Room manager</h1><br>
         <div><br>
             <a href='z_quarto.cad.php'><button class="btn btn-primary"><i class="fa-regular fa-circle-dot">  Register room</i></button></a>
         </div><br>
         <table class="table">
             <tr class=titulos>
-                <th>Número</th>
-                <th>Tipo</th>
-                <th>Estado</th>
-                <th>Opções</th>
+                <th>Number</th>
+                <th>Type</th>
+                <th>Status</th>
+                <th>Options</th>
             </tr>
             <?php
             foreach($quartos as $quarto){
