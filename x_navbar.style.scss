@@ -1,28 +1,33 @@
+#navegacao{
+    height: 100px;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.paginicial{
+    margin-left: 20px;
+}
+
+.navitens{
+    display: flex;
+    align-items: center;
+}
+
+.sair{
+    margin-right: 20px;
+}
+
+.itemhome{
     color: black;
 }
 
-.navbar{
-    background-color: #0d6efd;
+.itemnav{
+    color: black;
+    margin-right: 20px;
 }
 
-.nav-item{
-    margin: 10px;
-    padding: 5px;
-    position: relative;
-    left: 20%;
+.itemsair{
+    color: black;
 }
-
-.nav-link{
-
-    color: beige;
-}
-
-.navbar-nav{    
-
-}
-

@@ -9,27 +9,20 @@
     <script src="https://kit.fontawesome.com/ff4091c7e3.js" crossorigin="anonymous"></script>
     <title>Pococupado</title>
 </head>
-<nav class="navbar navbar-expand">
-        <div class="container-fluid">
-            <a class="main" href="restrita.php"><h1>HOME</h1></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="z_quarto.index.php">Room manager</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="y_cliente.index.php">Client manager</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="sair.php">Quit</a>
-                </li>
-            </ul>
-            </div>
-        </div>
-    </nav>
+
+<nav id="navegacao">
+    <div class="paginicial">
+        <a class="itemhome" href="restrita.php"><h1>HOME</h1></a>
+    </div>
+    <div class="navitens">
+        <a class="itemnav" href="z_quarto.index.php">Room manager</a>
+        <a class="itemnav" href="y_cliente.index.php">Client manager</a>
+    </div>
+    <div class="sair">
+        <a class="itemsair" href="sair.php">Quit</a>
+    </div>
+</nav>
+
 <body>
 </body>
 </html>
