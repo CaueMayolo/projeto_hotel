@@ -1,8 +1,6 @@
 <?php
 require_once __DIR__.'/acesso.php';
-
 require_once __DIR__.'/x_navbar.php';
-
 require_once __DIR__."/vendor/autoload.php";
 $quartos = Quarto::findall();
 ?>
@@ -21,13 +19,15 @@ $quartos = Quarto::findall();
     <div class="container"><br>
         <h1>Room manager</h1><br>
         <div><br>
-            <a href='z_quarto.cad.php'><button class="btn btn-primary"><i class="fa-regular fa-circle-dot">  Register room</i></button></a>
+            <a href='z_quarto.cad.php'><button class="btn btn-primary"><i class="fa-regular fa-circle-dot">Register room</i></button></a>
         </div><br>
         <table class="table">
             <tr class=titulos>
-                <th>Number</th>
+                <th>Room Number</th>
                 <th>Type</th>
                 <th>Status</th>
+                <th>Beds</th>
+                <th>Bathrooms</th>
                 <th>Options</th>
             </tr>
             <?php
@@ -36,6 +36,8 @@ $quartos = Quarto::findall();
                 echo "<td>{$quarto->getNumero()}</td>";
                 echo "<td>{$quarto->getTipo()}</td>";
                 echo "<td>{$quarto->getEstado()}</td>";
+                echo "<td>{$quarto->getCamas()}</td>";
+                echo "<td>{$quarto->getBanheiros()}</td>";
                 echo "<td>
                         <div>
                             <a href='z_quarto.editar.php?id={$quarto->getIdQuarto()}'><button class='btn btn-primary'>Edit  <i class='fa-solid fa-pen-to-square'></i></button></a>

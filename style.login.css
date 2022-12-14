@@ -1,15 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
 
 body{
-    background-color: aqua;
+    background-image: linear-gradient(to right, rgb(219, 75, 75), rgb(235, 123, 48));
+    height: 100%;
 }
 
 .titulo{
     display: flex;
+    font-family: 'Koulen', cursive;
+    color: white;
     justify-content: center;
     height: 150px;
     font-size: 40px;
     align-items: center;
     margin-bottom: 10px;
+}
+
+h1{
+    width: 600px;
+    text-align: center;
+    text-shadow:
+        -1px -1px 1px black,
+        -1px 4px 5px black,                    
+        1px -1px 5px black,                  
+        1px 4px 1px black;
 }
 
 .divFormulario{
@@ -22,9 +37,15 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: cente;
-    border: 5px solid black;
+    border: 3px solid white;
+    color: white;
+    text-shadow:
+               -1px -1px 1px black,
+               -1px 0px 1px black,                    
+                1px -1px 1px black,                  
+                1px 0px 1px black;
     border-radius: 15px;
-    background-color:rgb(255, 149, 0);
+    background-color:rgb(223, 140, 85);
     width: 300px;
     padding: 30px;
 }
@@ -63,6 +84,10 @@ input{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+a{
+    color: white;
 }
 
 button{

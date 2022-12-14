@@ -30,15 +30,33 @@ class Funcionario implements ActiveRecord{
         return $this->email;
     }
 
+    public function existeUsuario($email){
+        $conexao = new MySQL();
+        $sql = "SELECT email FROM funcionario WHERE email = '$email'";
+        $resultados = $conexao->consulta($sql);
+        $existem = count($resultados);
+        if(1 == $existem){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
     public function save():bool{
         $conexao = new MySQL();
-        $this->senha = password_hash($this->senha,PASSWORD_BCRYPT); 
-        if(isset($this->id_funcionario)){
-            $sql = "UPDATE funcionario SET email = '{$this->email}' ,senha = '{$this->senha}' WHERE id_funcionario = {$this->id_funcionario}";
-        }else{
-            $sql = "INSERT INTO funcionario (email,senha) VALUES ('{$this->email}','{$this->senha}')";
+        $existe = $this->existeUsuario($this->email);
+        if (!$existe) {
+            $this->senha = password_hash($this->senha,PASSWORD_BCRYPT); 
+            if(isset($this->id_funcionario)){
+                $sql = "UPDATE funcionario SET email = '{$this->email}' ,senha = '{$this->senha}' WHERE id_funcionario = {$this->id_funcionario}";
+            }else{
+                $sql = "INSERT INTO funcionario (email,senha) VALUES ('{$this->email}','{$this->senha}')";
+            }
+            return $conexao->executa($sql);
+        }else {
+            return false;
         }
-        return $conexao->executa($sql);
     }
 
     public static function find($id_funcionario):Funcionario{
@@ -67,6 +85,19 @@ class Funcionario implements ActiveRecord{
             $funcionario[] = $u;
         }
         return $funcionario;
+    }
+
+    public function senhaIgual($senha){
+        $conexao = new MySQL();
+        $sql = "SELECT senha FROM funcionario WHERE senha = '$senha'";
+        $resultados = $conexao->consulta($sql);
+        $mesma = count($resultados);
+        if(1 == $existem){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     public function authenticate():bool{

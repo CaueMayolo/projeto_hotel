@@ -33,7 +33,7 @@ if(isset($_POST['botao'])){
                             <h2>Sign in</h2>
                         </div>
                         <div class="subTituloCad">
-                            <h3>Enter the manager</h3>
+                            <h3>Enter manager</h3>
                         </div>
                         <div class="campos">
                             <div>
@@ -46,7 +46,7 @@ if(isset($_POST['botao'])){
                             </div>
                         </div>
                         <div class='links'>  
-                            <button class='botao-login' type='submit' name='botao'>Login  <i class="fa-solid fa-right-to-bracket"></i></button>
+                            <button class='botao-login' type='submit' name='botao'>Log in  <i class="fa-solid fa-right-to-bracket"></i></button>
                             <a class="link-cadastro" href='formFuncionario.php'>Register user</a>
                         </div>
                     </div>       

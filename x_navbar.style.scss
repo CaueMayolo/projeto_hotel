@@ -1,6 +1,6 @@
 #navegacao{
     height: 100px;
-    background-color: aqua;
+    background-image: linear-gradient(to right, rgb(219, 75, 75), rgb(235, 123, 48));
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -13,6 +13,13 @@
 .navitens{
     display: flex;
     align-items: center;
+    color: white;
+    text-shadow:
+               -1px -1px 1px black,
+               -1px 0px 1px black,                    
+                1px -1px 1px black,                  
+                1px 0px 1px black;
+    text-decoration: none;
 }
 
 .sair{
@@ -20,14 +27,27 @@
 }
 
 .itemhome{
-    color: black;
+    color: white;
+    text-shadow:
+               -1px -1px 1px black,
+               -1px 5px 1px black,                    
+                1px -1px 1px black,                  
+                1px 5px 1px black;
+    text-decoration: none;
 }
 
 .itemnav{
-    color: black;
+    color: white;
     margin-right: 20px;
+    text-decoration: none;
 }
 
 .itemsair{
-    color: black;
+    color: white;
+    text-shadow:
+               -1px -1px 1px black,
+               -1px 0px 1px black,                    
+                1px -1px 1px black,                  
+                1px 0px 1px black;
+    text-decoration: none;
 }
