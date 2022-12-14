@@ -1,6 +1,8 @@
-<?php require_once __DIR__.'/x_navbar.php'; ?>
-
 <?php
+require_once __DIR__.'/acesso.php';
+
+require_once __DIR__.'/x_navbar.php';
+
 require_once __DIR__."/vendor/autoload.php";
 $quartos = Quarto::findall();
 ?>
