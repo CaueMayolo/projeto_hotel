@@ -18,30 +18,38 @@ if(isset($_POST['botao'])){
     <title>Register employee</title>
 </head>
 <body>
-    <div>
-        <h1>Pococupado's manager</h1>
-    </div>
-    <form class="form" action='formFuncionario.php' method='post'>
-        <div class="card">
-            <div class="card-top">
-                <h2 class="titulo">Sign up</h2>
-                <br>
-                <p class="desc">Register employee</p>
+    <article>
+        <div class="telaLogin">
+            <div class="titulo">
+                <h1>Pococupado's manager</h1>
             </div>
-            <br>
-            <div class="card-group">
-                <label for='email'>E-mail:</label>
-                <input type='email' name='email' id='email' required>
+            <div class="divFormulario">
+                <form class="formulario" action='formFuncionario.php' method='post'>
+                    <div>
+                        <div class="tituloCad">
+                            <h2>Sign up</h2>
+                        </div>
+                        <div class="subTituloCad">
+                            <h3>Register employee</h3>
+                        </div>
+                        <div class="campos">
+                            <div>
+                                <label for='email'>E-mail:</label><br>
+                                <input type='email' name='email' id='email' required><br>
+                            </div>
+                            <div>
+                                <label for='senha'>Password:</label><br>
+                                <input type='password' name='senha' id='senha' required><br>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <button class="botao-login" type='submit' name='botao'>Register  <i class="fa-solid fa-plus"></i></button>
+                            <a class="link-cadastro" href='index.php'>Return to login </a>
+                        </div>
+                    </div>
+                </form>            
             </div>
-            <div class="card-group">
-                <label for='senha'>Password:</label>
-                <input type='password' name='senha' id='senha' required>
-            </div>
-            <div class="div-botao-login">
-                <button class="botao-login" type='submit' name='botao'>Register  <i class="fa-solid fa-plus"></i></button>
-            </div>
-            <a class="link-cadastro" href='index.php'>Return to login </a>
         </div>
-    </form>
+    </article>
 </body>
 </html>
