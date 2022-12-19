@@ -45,7 +45,7 @@ h1{
     border-radius: 15px;
     background-color:rgb(223, 140, 85);
     width: 300px;
-    padding: 30px;
+    padding: 20px;
 }
 
 .tituloCad{
@@ -77,6 +77,10 @@ input{
     border-radius: 10px;
 }
 
+.numero{
+    text-align: center;
+}
+
 .links{
     display: flex;
     align-items: center;
@@ -97,7 +101,7 @@ button{
 
 select{
     width: 240px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     height: 30px;
     border-radius: 10px;
 }

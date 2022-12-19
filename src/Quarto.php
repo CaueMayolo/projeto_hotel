@@ -5,7 +5,7 @@ class Quarto implements ActiveRecord{
     private int $id_quarto;
     
     public function __construct(
-        private string $numero,
+        private int $numero,
         private string $tipo,
         private string $estado,
         private string $banheiros,
@@ -20,11 +20,11 @@ class Quarto implements ActiveRecord{
         return $this->id_quarto;
     }
 
-    public function setNumero(string $numero):void{
+    public function setNumero(int $numero):void{
         $this->numero = $numero;
     }
 
-    public function getNumero():string{
+    public function getNumero():int{
         return $this->numero;
     }
 
@@ -77,9 +77,9 @@ class Quarto implements ActiveRecord{
         $conexao = new MySQL();
         $existe = $this->existeQuarto($this->numero);
         if (!$existe) {
-            $sql = "INSERT INTO quarto (numero,tipo,estado,banheiros,camas) VALUES ('{$this->numero}','{$this->tipo}','{$this->estado}','{$this->banheiros}','{$this->camas}')";
+            $sql = "INSERT INTO quarto (numero,tipo,estado,banheiros,camas) VALUES ({$this->numero},'{$this->tipo}','{$this->estado}','{$this->banheiros}','{$this->camas}')";
             return $conexao->executa($sql);
-        } else if ($existe and isset($this->id_quarto)) {
+        } else if ($existe && isset($this->id_quarto)) {
             $sql = "UPDATE quarto SET numero = '{$this->numero}' ,tipo = '{$this->tipo}',estado = '{$this->estado}', banheiros = '{$this->banheiros}',camas = '{$this->camas}' WHERE id_quarto = {$this->id_quarto}";
             return $conexao->executa($sql);
         }else{

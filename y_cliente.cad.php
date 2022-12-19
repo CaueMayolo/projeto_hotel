@@ -19,7 +19,7 @@ if(isset($_POST['botao'])){
     <article>
         <div class="telaLogin">
             <div class="titulo">
-                <h1>Cliente register</h1>
+                <h1>Client register</h1>
             </div>
             <div class="divFormulario">
                 <form class="formulario" action='y_cliente.cad.php' method='POST'>
@@ -27,20 +27,19 @@ if(isset($_POST['botao'])){
                         <div class="campos">
                             <div>
                                 <label for='nome'>Name:</label><br>
-                                <input name='nome' id='nome' type='text' maxlength="11" required><br>
+                                <input name='nome' id='nome' type='text' maxlength="200" required><br>
                             </div>
                             <div>
-                                <label for='sobrenome'>Sobrenome:</label><br>
-                                <input type='text' name='sobrenome' id='sobrenome' required><br>
+                                <label for='sobrenome'>Last name:</label><br>
+                                <input type='text' name='sobrenome' id='sobrenome' maxlength="200" required><br>
                             </div>
                             <div>
                                 <label for='cpf'>Cpf:</label><br>
-                                <input type='text' name='cpf' id='cpf' maxlength="14" required><br>
-                                <script src="./y_mask_cpf.js"></script>
+                                <input type='text' name='cpf' id='cpf' pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}" placeholder="999.999.999-99" maxlength="14" required><br>
                             </div>
                             <div>
-                                <label for='telefone'>Fone:</label><br>
-                                <input type='text' name='telefone' id='telefone'   required><br>
+                                <label for='telefone'>Phone:</label><br>
+                                <input type='tel' name='telefone' id='telefone' pattern="[0-9]{2} [0-9]{5}-[0-9]{4}" placeholder="11 99999-9999" maxlength="13" required><br>
                             </div>
                         </div>
                         <div class='links'>  

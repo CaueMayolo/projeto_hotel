@@ -17,14 +17,14 @@ $clientes = Cliente::findall();
     <div class="container"><br>
         <h1>Client manager</h1><br>
         <div><br>
-            <a href='y_cliente.cad.php'><button class="botaoRegistro"><i class="fa-regular fa-circle-dot"></i>  Register client</button></a>
+            <a href='y_cliente.cad.php'><button class="botaoRegistro"><i class="fa-regular fa-circle-dot"></i>  Client Register</button></a>
         </div><br>
         <table class="table">
             <tr class=titulos>
                 <th>Name</th>
                 <th>Last name</th>
                 <th>CPF</th>
-                <th>Telefone</th>
+                <th>Phone</th>
                 <th>Options</th>
             </tr>
             <?php
@@ -44,7 +44,6 @@ $clientes = Cliente::findall();
             }
             ?>
         </table>
-    </div>
     </div>
 </body>
 </html>

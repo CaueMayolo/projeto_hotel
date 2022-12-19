@@ -17,6 +17,7 @@
     <div class="navitens">
         <a class="itemnav" href="z_quarto.index.php">Room manager</a>
         <a class="itemnav" href="y_cliente.index.php">Client manager</a>
+        <a class="itemnav" href="yz_quarto_cliente.index.php">Room  -> Client</a>
     </div>
     <div class="sair">
         <a class="itemsair" href="sair.php">Quit</a>

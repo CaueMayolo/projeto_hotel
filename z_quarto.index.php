@@ -18,7 +18,7 @@ $quartos = Quarto::findall();
     <div class="container"><br>
         <h1>Room manager</h1><br>
         <div><br>
-            <a href='z_quarto.cad.php'><button class="botaoRegistro"><i class="fa-regular fa-circle-dot"></i>  Register room</button></a>
+            <a href='z_quarto.cad.php'><button class="botaoRegistro"><i class="fa-regular fa-circle-dot"></i>  Room Register</button></a>
         </div><br>
         <table class="table">
             <tr class=titulos>

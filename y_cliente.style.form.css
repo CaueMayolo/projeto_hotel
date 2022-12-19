@@ -77,6 +77,10 @@ input{
     border-radius: 10px;
 }
 
+.cpf{
+    text-align: center;
+}
+
 .links{
     display: flex;
     align-items: center;

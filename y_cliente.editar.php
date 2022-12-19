@@ -33,19 +33,19 @@ if(isset($_POST['botao'])){
                         <?php
                             echo    "<div>";
                             echo        "<label for='nome' >Name:</label><br>";
-                            echo        "<input name='nome' id='nome' type='text' value='{$cliente->getNome()}' required><br>";
+                            echo        "<input name='nome' id='nome' type='text' value='{$cliente->getNome()}' maxlength='200' required><br>";
                             echo    "</div>";
                             echo    "<div>";
-                            echo        "<label for='sobrenome'>Sobrenome:</label><br>";
-                            echo        "<input type='text' name='sobrenome' id='sobrenome' value='{$cliente->getSobrenome()}' required><br>";
+                            echo        "<label for='sobrenome'>Last name:</label><br>";
+                            echo        "<input type='text' name='sobrenome' id='sobrenome' value='{$cliente->getSobrenome()}' maxlength='200' required><br>";
                             echo    "</div>";
                             echo    "<div>";
                             echo        "<label for='cpf'>Cpf:</label><br>";
-                            echo        "<input type='text' name='cpf' id='cpf' value='{$cliente->getCpf()}' required><br>";
+                            echo        "<input class='cpf' type='text' name='cpf' id='cpf' value='{$cliente->getCpf()}' pattern='[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}' placeholder='999.999.999-99' maxlength='14' readonly><br>";
                             echo    "</div>";
                             echo    "<div>";
-                            echo        "<label for='telefone'>Fone:</label><br>";
-                            echo        "<input type='text' name='telefone' id='telefone' value='{$cliente->getTelefone()}' required><br>";
+                            echo        "<label for='telefone'>Phone:</label><br>";
+                            echo        "<input type='tel' name='telefone' id='telefone' value='{$cliente->getTelefone()}' pattern='[0-9]{2} [0-9]{5}-[0-9]{4}' placeholder='11 99999-9999' maxlength='13' required";
                             echo    "</div>";
                             echo    "<input name='id' value='{$cliente->getIdCliente()}' type='hidden'>";
                         ?>

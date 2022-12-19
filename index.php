@@ -38,11 +38,11 @@ if(isset($_POST['botao'])){
                         <div class="campos">
                             <div>
                                 <label for='email'>E-mail:</label><br>
-                                <input type='email' name='email' id='email' required><br>
+                                <input type='email' name='email' id='email' maxlength='200' required><br>
                             </div>
                             <div>
                                 <label for='senha'>Password:</label><br>
-                                <input type='password' name='senha' id='senha' required><br>
+                                <input type='password' name='senha' id='senha' maxlength='200' required><br>
                             </div>
                         </div>
                         <div class='links'>  

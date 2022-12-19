@@ -27,7 +27,7 @@ if(isset($_POST['botao'])){
                         <div class="campos">
                         <div>
                             <label for="numero">Room Number:</label><br>
-                            <input name='numero' type='text' maxLength="3" required><br>
+                            <input name='numero' type='number' min="100" max="999" required><br>
                         </div>
                         <div>
                             <label for="tipo">Type:</label><br>
@@ -54,7 +54,7 @@ if(isset($_POST['botao'])){
                         <div>
                             <label for="camas">Beds:</label><br>
                             <select name="camas" id="camas">
-                                <option value="1 - Single">1 - Cingle</option>
+                                <option value="1 - Single">1 - Single</option>
                                 <option value="1 - Couple">1 - Couple </option>
                                 <option value="2 - Couple and single">2 - Couple and single</option>
                             </select><br>
@@ -62,7 +62,7 @@ if(isset($_POST['botao'])){
                         </div>
                         <div class='links'>  
                             <button class='botao-login' type='submit' name='botao'>Send  <i class="fa-solid fa-right-to-bracket"></i></button>
-                            <a class="link-cadastro" href='z_quarto.index.php'>Client maneger</a>
+                            <a class="link-cadastro" href='z_quarto.index.php'>Room maneger</a>
                         </div>
                     </div>       
                 </form>
