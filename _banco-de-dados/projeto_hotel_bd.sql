@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 30, 2022 at 01:57 AM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 8.1.10
+-- Tempo de geração: 19-Dez-2022 às 04:10
+-- Versão do servidor: 10.4.25-MariaDB
+-- versão do PHP: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,33 +18,36 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `projeto_hotel_bd`
+-- Banco de dados: `projeto_hotel_bd`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cliente`
+-- Estrutura da tabela `cliente`
 --
 
 CREATE TABLE `cliente` (
   `id_cliente` int(10) NOT NULL,
   `nome` varchar(200) NOT NULL,
   `sobrenome` varchar(200) NOT NULL,
-  `cpf` varchar(14) NOT NULL
+  `cpf` varchar(14) NOT NULL,
+  `telefone` varchar(13) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `cliente`
+-- Extraindo dados da tabela `cliente`
 --
 
-INSERT INTO `cliente` (`id_cliente`, `nome`, `sobrenome`, `cpf`) VALUES
-(4, 'Caue ', 'Mayolo', '045.019.410-81');
+INSERT INTO `cliente` (`id_cliente`, `nome`, `sobrenome`, `cpf`, `telefone`) VALUES
+(38, 'Cauê', 'Mayolo da Silveira', '045.019.410-81', '51 99815-8025'),
+(40, 'Lucas Eduardo', 'Becker Berlande', '111.222.333-12', '55 12345-6789'),
+(42, 'Diogo ', 'Maurer', '555.444.666-46', '56 55555-6666');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `funcionario`
+-- Estrutura da tabela `funcionario`
 --
 
 CREATE TABLE `funcionario` (
@@ -54,75 +57,79 @@ CREATE TABLE `funcionario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `funcionario`
+-- Extraindo dados da tabela `funcionario`
 --
 
 INSERT INTO `funcionario` (`id_funcionario`, `email`, `senha`) VALUES
-(7, 'mayolo.caue@gmail.com', '$2y$10$Hk19HOGD90aZg6QcYNY5sO2mKSKqhmkg5frPbbIUXAFXcIXsqJlH2');
+(15, 'mayolo.caue@gmail.com', '$2y$10$3UHTcdrqfhdbiV1aUdL3UO8qcpUCGrexV0t4GTYh76QkEObhPnQ/2');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `quarto`
+-- Estrutura da tabela `quarto`
 --
 
 CREATE TABLE `quarto` (
   `id_quarto` int(10) NOT NULL,
-  `numero` int(4) NOT NULL,
+  `numero` int(3) NOT NULL,
   `tipo` varchar(200) NOT NULL,
-  `estado` varchar(200) NOT NULL
+  `estado` varchar(200) NOT NULL,
+  `banheiros` varchar(30) NOT NULL,
+  `camas` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `quarto`
+-- Extraindo dados da tabela `quarto`
 --
 
-INSERT INTO `quarto` (`id_quarto`, `numero`, `tipo`, `estado`) VALUES
-(7, 425, 'suite', 'livre');
+INSERT INTO `quarto` (`id_quarto`, `numero`, `tipo`, `estado`, `banheiros`, `camas`) VALUES
+(45, 123, 'Suite', 'Empty', '1 - With bathtub', '1 - Single'),
+(46, 456, 'Common', 'Occupied', '1 - Without bathtub', '1 - Couple'),
+(47, 789, 'Common', 'Occupied', '2 - One with bathtub', '2 - Couple and single');
 
 --
--- Indexes for dumped tables
+-- Índices para tabelas despejadas
 --
 
 --
--- Indexes for table `cliente`
+-- Índices para tabela `cliente`
 --
 ALTER TABLE `cliente`
   ADD PRIMARY KEY (`id_cliente`);
 
 --
--- Indexes for table `funcionario`
+-- Índices para tabela `funcionario`
 --
 ALTER TABLE `funcionario`
   ADD PRIMARY KEY (`id_funcionario`);
 
 --
--- Indexes for table `quarto`
+-- Índices para tabela `quarto`
 --
 ALTER TABLE `quarto`
   ADD PRIMARY KEY (`id_quarto`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de tabelas despejadas
 --
 
 --
--- AUTO_INCREMENT for table `cliente`
+-- AUTO_INCREMENT de tabela `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id_cliente` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_cliente` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
--- AUTO_INCREMENT for table `funcionario`
+-- AUTO_INCREMENT de tabela `funcionario`
 --
 ALTER TABLE `funcionario`
-  MODIFY `id_funcionario` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_funcionario` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT for table `quarto`
+-- AUTO_INCREMENT de tabela `quarto`
 --
 ALTER TABLE `quarto`
-  MODIFY `id_quarto` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_quarto` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
