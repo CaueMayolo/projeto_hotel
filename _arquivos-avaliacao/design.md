@@ -2,7 +2,7 @@ Neste arquivo deve ser descrito como o projeto foi desenvolvido. Mencione aqui q
 
 TECNOLOGIAS USADAS:
 - HTML;
-- SCSS;
+- CSS;
 - PHP;
 - SQL;
 - XAMPP;

@@ -49,7 +49,7 @@ class Funcionario implements ActiveRecord{
         if (!$existe) {
             $this->senha = password_hash($this->senha,PASSWORD_BCRYPT); 
             if(isset($this->id_funcionario)){
-                $sql = "UPDATE funcionario SET email = '{$this->email}' ,senha = '{$this->senha}' WHERE id_funcionario = {$this->id_funcionario}";
+                $sql = "UPDATE funcionario SET email = '{$this->email}',senha = '{$this->senha}' WHERE id_funcionario = {$this->id_funcionario}";
             }else{
                 $sql = "INSERT INTO funcionario (email,senha) VALUES ('{$this->email}','{$this->senha}')";
             }

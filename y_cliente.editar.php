@@ -5,7 +5,7 @@ if(isset($_GET['id'])){
 }
 if(isset($_POST['botao'])){
     require_once __DIR__."/vendor/autoload.php";
-    $cliente = new Cliente($_POST['nome'],$_POST['sobrenome'],$_POST['cpf']);
+    $cliente = new Cliente($_POST['nome'],$_POST['sobrenome'],$_POST['cpf'],$_POST['telefone']);
     $cliente->setIdCliente($_POST['id']);
     $cliente->save();
     header("location: y_cliente.index.php");
@@ -17,21 +17,47 @@ if(isset($_POST['botao'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="y_cliente.style.form.css">
     <title>Edit Client</title>
 </head>
 <body>
-    <form action='y_cliente.editar.php' method='POST'>
-        <?php
-            echo "Name: <input name='nome' value='{$cliente->getNome()}' type='text' required>";
-            echo "<br>";
-            echo "Last name: <input name='sobrenome' value='{$cliente->getSobrenome()}' type='text' required>";
-            echo "<br>";
-            echo "CPF: <input name='cpf' value='{$cliente->getCpf()}' type='text' required>";
-            echo "<br>";
-            echo "<input name='id' value='{$cliente->getIdCliente()}' type='hidden'>";
-        ?>
-        <br>
-        <button name='botao'>send</button>
-    </form>
+<article>
+        <div class="telaLogin">
+            <div class="titulo">
+                <h1>Edit Client</h1>
+            </div>
+            <div class="divFormulario">
+                <form class="formulario" action='y_cliente.editar.php' method='POST'>
+                    <div>
+                        <div class="campos">
+                        <?php
+                            echo    "<div>";
+                            echo        "<label for='nome' >Name:</label><br>";
+                            echo        "<input name='nome' id='nome' type='text' value='{$cliente->getNome()}' required><br>";
+                            echo    "</div>";
+                            echo    "<div>";
+                            echo        "<label for='sobrenome'>Sobrenome:</label><br>";
+                            echo        "<input type='text' name='sobrenome' id='sobrenome' value='{$cliente->getSobrenome()}' required><br>";
+                            echo    "</div>";
+                            echo    "<div>";
+                            echo        "<label for='cpf'>Cpf:</label><br>";
+                            echo        "<input type='text' name='cpf' id='cpf' value='{$cliente->getCpf()}' required><br>";
+                            echo    "</div>";
+                            echo    "<div>";
+                            echo        "<label for='telefone'>Fone:</label><br>";
+                            echo        "<input type='text' name='telefone' id='telefone' value='{$cliente->getTelefone()}' required><br>";
+                            echo    "</div>";
+                            echo    "<input name='id' value='{$cliente->getIdCliente()}' type='hidden'>";
+                        ?>
+                        </div>
+                        <div class='links'>  
+                            <button class='botao-login' type='submit' name='botao'>Send  <i class="fa-solid fa-right-to-bracket"></i></button>
+                            <a class="link-cadastro" href='y_cliente.index.php'>Client maneger</a>
+                        </div>
+                    </div>       
+                </form>
+            </div>
+        </div>
+    </article>
 </body>
 </html>

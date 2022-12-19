@@ -12,57 +12,64 @@ if(isset($_POST['botao'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="z_quarto.style.form.css">
     <title>Adds Room</title>
 </head>
 <body>
     <article>
-        <div class="divFormulario">
+        <div class="telaLogin">
             <div class="titulo">
                 <h1>Room Register</h1>
             </div>
-            <div class="formulario" action='index.php' method='post'>
-                <form action='z_quarto.cad.php' method='POST'>
-                    <div class="campos">
+            <div class="divFormulario">
+                <form class="formulario" action='z_quarto.cad.php' method='POST'>
+                    <div>
+                        <div class="campos">
                         <div>
                             <label for="numero">Room Number:</label><br>
-                            <input name='numero' type='text' required>
+                            <input name='numero' type='text' maxLength="3" required><br>
                         </div>
                         <div>
-                            <label for="tipo">Type:</label>
+                            <label for="tipo">Type:</label><br>
                             <select name="tipo" id="tipo">
-                                <option value="suite">Suite</option>
-                                <option value="normal">Common</option>
-                            </select>
+                                <option value="Suite">Suite</option>
+                                <option value="Common">Common</option>
+                            </select><br>
                         </div>
                         <div>
-                            <label for="estado">Status:</label>
+                            <label for="estado">Status:</label><br>
                             <select name="estado" id="estado">
-                                <option value="vago">Empty</option>
-                                <option value="ocupado">Occupied</option>
-                            </select>
+                                <option value="Empty">Empty</option>
+                                <option value="Occupied">Occupied</option>
+                            </select><br>
                         </div>
                         <div>
-                            <label for="banheiros">Bathrooms:</label>
+                            <label for="banheiros">Bathrooms:</label><br>
                             <select name="banheiros" id="banheiros">
-                                <option value="1 - with bathtub">1 - with bathtub</option>
-                                <option value="1 - without bathtub">1 - without bathtub</option>
-                                <option value="2 - one with bathtub">2 - one with bathtub</option>
-                            </select>
+                                <option value="1 - With bathtub">1 - With bathtub</option>
+                                <option value="1 - Without bathtub">1 - Without bathtub</option>
+                                <option value="2 - One with bathtub">2 - One with bathtub</option>
+                            </select><br>
                         </div>
                         <div>
-                            <label for="camas">Beds:</label>
+                            <label for="camas">Beds:</label><br>
                             <select name="camas" id="camas">
-                                <option value="1 - single">1 - single</option>
-                                <option value="1 - couple">1 - couple </option>
-                                <option value="2 - couple and single">2 - couple and single</option>
-                            </select>
+                                <option value="1 - Single">1 - Cingle</option>
+                                <option value="1 - Couple">1 - Couple </option>
+                                <option value="2 - Couple and single">2 - Couple and single</option>
+                            </select><br>
                         </div>
-                        <button name='botao'>Send</button>
-                    </div>
+                        </div>
+                        <div class='links'>  
+                            <button class='botao-login' type='submit' name='botao'>Send  <i class="fa-solid fa-right-to-bracket"></i></button>
+                            <a class="link-cadastro" href='z_quarto.index.php'>Client maneger</a>
+                        </div>
+                    </div>       
                 </form>
             </div>
         </div>
     </article>
 </body>
 </html>
+
 

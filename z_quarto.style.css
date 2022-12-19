@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.table{
+    border: 2px solid black;
+    text-align: center;
+}
+
+th{
+    border: solid 3px;
+    width: 90px;
+}
+
+th{
+    border: solid 3px;
+}
+
+.botaoRegistro{
+    width: 150px;
+    height: 50px;
+    border: solid 3px black;
+    border-radius: 15px; 
+    background-image: linear-gradient(to right, rgb(219, 75, 75), rgb(235, 123, 48));
+}
+
+.botaoAcao{
+    width: 100px;
+    height: 30px;
+    border: solid 3px black;
+    border-radius: 15px; 
+    background-image: linear-gradient(to right, rgb(219, 75, 75), rgb(235, 123, 48));
+}

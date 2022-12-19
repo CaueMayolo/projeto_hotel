@@ -7,7 +7,9 @@ class Cliente implements ActiveRecord{
     public function __construct(
         private string $nome,
         private string $sobrenome,
-        private string $cpf){
+        private string $cpf,
+        private string $telefone,
+        ){
     }
 
     public function setIdCliente(int $id_cliente):void{
@@ -42,16 +44,41 @@ class Cliente implements ActiveRecord{
         return $this->cpf;
     }
 
+    public function setTelefone(string $telefone):void{
+        $this->cpf = $telefone;
+    }
+
+    public function getTelefone():string{
+        return $this->telefone;
+    }
+
+    public function existeCliente($cpf){
+        $conexao = new MySQL();
+        $sql = "SELECT cpf FROM cliente WHERE cpf = '$cpf'";
+        $resultados = $conexao->consulta($sql);
+        $existem = count($resultados);
+        if(1 == $existem){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
     public function save():bool{
         $conexao = new MySQL();
-        if(isset($this->id_cliente)){
-            $sql = "UPDATE cliente SET nome = '{$this->nome}' ,sobrenome = '{$this->sobrenome}',cpf = '{$this->cpf}' WHERE id_cliente = {$this->id_cliente}";
+        $existe = $this->existeCliente($this->cpf);
+        if (!$existe) {
+            $sql = "INSERT INTO cliente (nome,sobrenome,cpf,telefone) VALUES ('{$this->nome}','{$this->sobrenome}','{$this->cpf}','{$this->telefone}')";
+            return $conexao->executa($sql);
+        } else if ($existe and isset($this->id_cliente)) {
+            $sql = "UPDATE cliente SET nome = '{$this->nome}' ,sobrenome = '{$this->sobrenome}',cpf = '{$this->cpf}',telefone = '{$this->telefone}' WHERE id_cliente = {$this->id_cliente}";
+            return $conexao->executa($sql);
         }else{
-            $sql = "INSERT INTO cliente (nome,sobrenome,cpf) VALUES ('{$this->nome}','{$this->sobrenome}','{$this->cpf}')";
+            return false;
         }
-        return $conexao->executa($sql);
-        
     }
+
     public function delete():bool{
         $conexao = new MySQL();
         $sql = "DELETE FROM cliente WHERE id_cliente = {$this->id_cliente}";
@@ -62,7 +89,7 @@ class Cliente implements ActiveRecord{
         $conexao = new MySQL();
         $sql = "SELECT * FROM cliente WHERE id_cliente = {$id_cliente}";
         $resultado = $conexao->consulta($sql);
-        $p = new Cliente($resultado[0]['nome'],$resultado[0]['sobrenome'],$resultado[0]['cpf']);
+        $p = new Cliente($resultado[0]['nome'],$resultado[0]['sobrenome'],$resultado[0]['cpf'],$resultado[0]['telefone']);
         $p->setIdCliente($resultado[0]['id_cliente']);
         return $p;
     }
@@ -72,7 +99,7 @@ class Cliente implements ActiveRecord{
         $resultados = $conexao->consulta($sql);
         $clientes = array();
         foreach($resultados as $resultado){
-            $p = new Cliente($resultado['nome'],$resultado['sobrenome'],$resultado['cpf']);
+            $p = new Cliente($resultado['nome'],$resultado['sobrenome'],$resultado['cpf'],$resultado['telefone']);
             $p->setIdCliente($resultado['id_cliente']);
             $clientes[] = $p;
         }

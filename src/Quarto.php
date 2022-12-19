@@ -60,17 +60,33 @@ class Quarto implements ActiveRecord{
         return $this->camas;
     }
 
+    public function existeQuarto($numero){
+        $conexao = new MySQL();
+        $sql = "SELECT numero FROM quarto WHERE numero = '$numero'";
+        $resultados = $conexao->consulta($sql);
+        $existem = count($resultados);
+        if(1 == $existem){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    
     public function save():bool{
         $conexao = new MySQL();
-        if(isset($this->id_quarto)){
-            $sql = "UPDATE quarto 
-                SET numero = '{$this->numero}' ,tipo = '{$this->tipo}',estado = '{$this->estado}', estado = '{$this->estado}',banheiros = '{$this->banheiros}, camas = '{$this->camas}' WHERE id_quarto = {$this->id_quarto}";
+        $existe = $this->existeQuarto($this->numero);
+        if (!$existe) {
+            $sql = "INSERT INTO quarto (numero,tipo,estado,banheiros,camas) VALUES ('{$this->numero}','{$this->tipo}','{$this->estado}','{$this->banheiros}','{$this->camas}')";
+            return $conexao->executa($sql);
+        } else if ($existe and isset($this->id_quarto)) {
+            $sql = "UPDATE quarto SET numero = '{$this->numero}' ,tipo = '{$this->tipo}',estado = '{$this->estado}', banheiros = '{$this->banheiros}',camas = '{$this->camas}' WHERE id_quarto = {$this->id_quarto}";
+            return $conexao->executa($sql);
         }else{
-            $sql = "INSERT INTO quarto (numero,tipo,estado,banheiros,camas) VALUES ('{$this->numero}','{$this->tipo}','{$this->estado},'{$this->banheiros},'{$this->camas}')";
+            return false;
         }
-        return $conexao->executa($sql);
-        
     }
+
     public function delete():bool{
         $conexao = new MySQL();
         $sql = "DELETE FROM quarto WHERE id_quarto = {$this->id_quarto}";
