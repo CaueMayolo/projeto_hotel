@@ -37,7 +37,7 @@ if(isset($_POST['botao'])){
                                 echo "<div>";
                                 echo "</div>";
                                 echo "<label for='tipo'>Type:</label><br>";
-                                echo "<select name='tipo' id='tipo'>";
+                                echo "<select name='tipo' id='tipo'> value='{$quarto->getTipo()}'";
                                 echo     "<option value='Suite'>Suite</option>";
                                 echo     "<option value='Common'>Common</option>";
                                 echo "</select><br>";
@@ -51,7 +51,7 @@ if(isset($_POST['botao'])){
                                 echo "<div>";
                                 echo "</div>";
                                 echo "<label for='banheiros'>Bathrooms:</label>";
-                                echo "<select name='banheiros' id='banheiros'>";
+                                echo "<select name='banheiros' id='banheiros' >";
                                 echo    "<option value='1 - With bathtub'>1 - with bathtub</option>";
                                 echo    "<option value='1 - Without bathtub'>1 - without bathtub</option>";
                                 echo    "<option value='2 - One with bathtub'>2 - one with bathtub</option>";
@@ -59,9 +59,9 @@ if(isset($_POST['botao'])){
                                 echo "<div>";
                                 echo "</div>";
                                 echo "<label for='camas'>Beds:</label>";
-                                echo "<select name='camas' id='camas'>";
+                                echo "<select name='camas' id='camas' value='{$quarto->getCamas()}>";
                                 echo     "<option value='1 - Single'>1 - Single</option>";
-                                echo     "<option value='1 - Oouple'>1 - Couple </option>";
+                                echo     "<option value='1 - Couple'>1 - Couple </option>";
                                 echo     "<option value='2 - Couple and single'>2 - Couple and single</option>";
                                 echo "</select>";
                                 echo "<div>";
